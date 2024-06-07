@@ -7,13 +7,15 @@ output: html_document
 
 # Introduction
 
-```{r}
-setwd("/Users/nucb/Documents/GitHub/Decision-Tree-Based-Classification-Algorithms")
-```
-
 [Repository on GitHub](https://github.com/Kilpatrick33/Decision-Tree-Based-Classification-Algorithms)
 
 In this tutorial, we will learn how to apply decision tree-based algorithms to classification problems. We begin by examining the structure and mechanics of decision trees. We then move into ensemble learning using the random forest algorithm and begin to learn the hyper-parameter tuning process. After that, we will learn how to construct fully-tuned extreme gradient boosted (XGBoost) algorithms. These cutting-edge techniques push the boundaries of decision tree-based models, delivering unparalleled performance and efficiency in classification tasks.
+
+```{r}
+#Modify the base directory to where you have stored the files.
+base_dir <- "/Users/nucb/Documents/GitHub/Decision-Tree-Based-Classification-Algorithms"
+setwd(base_dir)
+```
 
 # Required Packages
 Before we begin, let's ensure we have the necessary R packages installed and updated. The following code will install any missing packages required for this tutorial. At time of writing, mlr has been replaced by mlr3; however mlr is a dependency so you will likely receive a warning.
@@ -70,13 +72,13 @@ options(mc.cores = num_cores_to_use)
 The data for this tutorial comes from a sound symbolism study (Kilpatrick, Ćwiek & Kawahara, 2023) where my colleagues and I explored how Pokémon evolution was expressed in Pokémon names. We took the names of Pokémon and converted them into a count of the number of times each sound occurs in each name. We discarded any Pokémon that was not part of an evolutionary tree and any mid-stage Pokémon because we were only interested in classifying pre- and post-evolution Pokémon. We also ran an elicitation experiment where we asked Japanese university students to name previously unseen Pokémon-like images like those below.
 
 ```{r, echo=FALSE, fig.align="center"}
-knitr::include_graphics("/Users/nucb/Documents/GitHub/Decision-Tree-Based-Classification-Algorithms/lion.jpg")
+knitr::include_graphics(file.path(base_dir, "lion.jpg"))
 ```
 **Figure 1:** Samples of the images used in the elicitation experiment. Note that the middle image was not used because that is an example of a mid-stage variant. Images presented here with permission of the artist Deviant Art user: Involuntary-Twitch.
 
 
 ```{r}
-Jpoke <- read.csv("/Users/nucb/Documents/GitHub/Decision-Tree-Based-Classification-Algorithms/Japanese_Pokemon.csv")
+Jpoke <- read.csv(file.path(base_dir, "Japanese_Pokemon.csv"))
 Jpoke$Evolution <- factor(Jpoke$Evolution)
 options(width = 150)
 head(Jpoke)
@@ -135,7 +137,9 @@ indices <- sample(1:nrow(Jpoke), size = 0.7 * nrow(Jpoke))
 train_data <- Jpoke[indices, ]
 test_data <- Jpoke[-indices, ]
 
-Untuned_Forest <- ranger(Evolution ~ ., data = train_data)
+Untuned_Forest <- ranger(Evolution ~ ., 
+                         num.trees = 100,
+                         data = train_data)
 print(Untuned_Forest)
 ```
 
