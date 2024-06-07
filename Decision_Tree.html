@@ -356,10 +356,13 @@ Algorithms</h1>
 </div>
 
 
-<div id="introduction" class="section level1">
-<h1>Introduction</h1>
 <p><a href="https://github.com/Kilpatrick33/Decision-Tree-Based-Classification-Algorithms">Repository
 on GitHub</a></p>
+<p>To cite: Kilpatrick, A. (2024-06-06). Decision Tree-Based
+Classification Algorithms. [the day you viewed the site]. Retrieved
+from: this web address</p>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
 <p>In this tutorial, we will learn how to apply decision tree-based
 algorithms to classification problems. We begin by examining the
 structure and mechanics of decision trees. We then move into ensemble
@@ -666,28 +669,28 @@ optimal values for each hyperparameter.</p>
 <pre class="r"><code>Tune_Output&lt;-makeClassifTask(data=train_data, target=&quot;Evolution&quot;)
 Tune_Output&lt;-tuneRanger(Tune_Output, measure=list(multiclass.brier), num.trees=100)</code></pre>
 <pre><code>## Computing y column(s) for design. Not provided.</code></pre>
-<pre><code>## [mbo] 0: mtry=7; min.node.size=16; sample.fraction=0.769 : y = 0.441 : 1.1 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=7; min.node.size=16; sample.fraction=0.769 : y = 0.441 : 0.5 secs : initdesign</code></pre>
 <pre><code>## [mbo] 0: mtry=29; min.node.size=84; sample.fraction=0.46 : y = 0.449 : 0.5 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=25; min.node.size=7; sample.fraction=0.809 : y = 0.473 : 0.5 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=10; min.node.size=2; sample.fraction=0.393 : y = 0.438 : 0.6 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=27; min.node.size=3; sample.fraction=0.494 : y = 0.443 : 0.8 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=5; min.node.size=33; sample.fraction=0.53 : y = 0.441 : 1.0 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=18; min.node.size=27; sample.fraction=0.678 : y = 0.441 : 0.7 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=12; min.node.size=10; sample.fraction=0.582 : y = 0.437 : 0.6 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=25; min.node.size=7; sample.fraction=0.809 : y = 0.473 : 0.6 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=10; min.node.size=2; sample.fraction=0.393 : y = 0.438 : 0.5 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=27; min.node.size=3; sample.fraction=0.494 : y = 0.443 : 0.6 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=5; min.node.size=33; sample.fraction=0.53 : y = 0.441 : 0.4 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=18; min.node.size=27; sample.fraction=0.678 : y = 0.441 : 0.4 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=12; min.node.size=10; sample.fraction=0.582 : y = 0.437 : 0.5 secs : initdesign</code></pre>
 <pre><code>## [mbo] 0: mtry=15; min.node.size=5; sample.fraction=0.699 : y = 0.452 : 0.5 secs : initdesign</code></pre>
 <pre><code>## [mbo] 0: mtry=18; min.node.size=58; sample.fraction=0.37 : y = 0.446 : 0.4 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=17; min.node.size=11; sample.fraction=0.42 : y = 0.435 : 0.6 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=4; min.node.size=68; sample.fraction=0.747 : y = 0.448 : 0.5 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=20; min.node.size=105; sample.fraction=0.616 : y = 0.453 : 0.4 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=22; min.node.size=3; sample.fraction=0.792 : y = 0.491 : 0.7 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=26; min.node.size=13; sample.fraction=0.864 : y = 0.475 : 0.7 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=17; min.node.size=11; sample.fraction=0.42 : y = 0.435 : 0.4 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=4; min.node.size=68; sample.fraction=0.747 : y = 0.448 : 0.4 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=20; min.node.size=105; sample.fraction=0.616 : y = 0.453 : 0.5 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=22; min.node.size=3; sample.fraction=0.792 : y = 0.491 : 0.6 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=26; min.node.size=13; sample.fraction=0.864 : y = 0.475 : 0.5 secs : initdesign</code></pre>
 <pre><code>## [mbo] 0: mtry=6; min.node.size=20; sample.fraction=0.317 : y = 0.439 : 0.4 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=2; min.node.size=7; sample.fraction=0.643 : y = 0.452 : 0.5 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=30; min.node.size=155; sample.fraction=0.721 : y = 0.458 : 0.5 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=24; min.node.size=8; sample.fraction=0.341 : y = 0.433 : 0.5 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=2; min.node.size=7; sample.fraction=0.643 : y = 0.452 : 0.4 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=30; min.node.size=155; sample.fraction=0.721 : y = 0.458 : 0.4 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=24; min.node.size=8; sample.fraction=0.341 : y = 0.433 : 0.4 secs : initdesign</code></pre>
 <pre><code>## [mbo] 0: mtry=15; min.node.size=160; sample.fraction=0.232 : y = 0.469 : 0.4 secs : initdesign</code></pre>
 <pre><code>## [mbo] 0: mtry=13; min.node.size=43; sample.fraction=0.845 : y = 0.442 : 0.5 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=12; min.node.size=4; sample.fraction=0.44 : y = 0.439 : 0.6 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=12; min.node.size=4; sample.fraction=0.44 : y = 0.439 : 0.5 secs : initdesign</code></pre>
 <pre><code>## [mbo] 0: mtry=3; min.node.size=220; sample.fraction=0.223 : y = 0.486 : 0.4 secs : initdesign</code></pre>
 <pre><code>## [mbo] 0: mtry=22; min.node.size=25; sample.fraction=0.552 : y = 0.435 : 0.5 secs : initdesign</code></pre>
 <pre><code>## [mbo] 0: mtry=21; min.node.size=2; sample.fraction=0.296 : y = 0.443 : 0.5 secs : initdesign</code></pre>
@@ -695,84 +698,84 @@ Tune_Output&lt;-tuneRanger(Tune_Output, measure=list(multiclass.brier), num.tree
 <pre><code>## [mbo] 0: mtry=11; min.node.size=124; sample.fraction=0.508 : y = 0.454 : 0.4 secs : initdesign</code></pre>
 <pre><code>## [mbo] 0: mtry=1; min.node.size=3; sample.fraction=0.292 : y = 0.474 : 0.4 secs : initdesign</code></pre>
 <pre><code>## [mbo] 0: mtry=8; min.node.size=5; sample.fraction=0.885 : y = 0.462 : 0.5 secs : initdesign</code></pre>
-<pre><code>## [mbo] 0: mtry=31; min.node.size=45; sample.fraction=0.256 : y = 0.442 : 0.5 secs : initdesign</code></pre>
+<pre><code>## [mbo] 0: mtry=31; min.node.size=45; sample.fraction=0.256 : y = 0.442 : 0.4 secs : initdesign</code></pre>
 <pre><code>## [mbo] 1: mtry=31; min.node.size=8; sample.fraction=0.352 : y = 0.436 : 0.5 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 2: mtry=11; min.node.size=20; sample.fraction=0.485 : y = 0.438 : 0.6 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 3: mtry=26; min.node.size=18; sample.fraction=0.354 : y = 0.433 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 4: mtry=25; min.node.size=16; sample.fraction=0.358 : y = 0.434 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 5: mtry=20; min.node.size=21; sample.fraction=0.294 : y = 0.434 : 0.5 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 2: mtry=11; min.node.size=20; sample.fraction=0.485 : y = 0.438 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 3: mtry=26; min.node.size=18; sample.fraction=0.354 : y = 0.433 : 0.5 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 4: mtry=25; min.node.size=16; sample.fraction=0.358 : y = 0.434 : 0.5 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 5: mtry=20; min.node.size=21; sample.fraction=0.294 : y = 0.434 : 0.4 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 6: mtry=15; min.node.size=23; sample.fraction=0.331 : y = 0.436 : 0.4 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 7: mtry=26; min.node.size=11; sample.fraction=0.315 : y = 0.434 : 0.5 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 8: mtry=26; min.node.size=8; sample.fraction=0.468 : y = 0.44 : 0.6 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 8: mtry=26; min.node.size=8; sample.fraction=0.468 : y = 0.44 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 9: mtry=24; min.node.size=17; sample.fraction=0.341 : y = 0.431 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 10: mtry=23; min.node.size=19; sample.fraction=0.351 : y = 0.436 : 0.5 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 10: mtry=23; min.node.size=19; sample.fraction=0.351 : y = 0.436 : 0.6 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 11: mtry=10; min.node.size=23; sample.fraction=0.585 : y = 0.434 : 0.4 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 12: mtry=25; min.node.size=15; sample.fraction=0.319 : y = 0.437 : 0.5 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 13: mtry=24; min.node.size=18; sample.fraction=0.362 : y = 0.434 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 13: mtry=24; min.node.size=18; sample.fraction=0.362 : y = 0.434 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 14: mtry=10; min.node.size=20; sample.fraction=0.538 : y = 0.434 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 15: mtry=27; min.node.size=20; sample.fraction=0.359 : y = 0.439 : 0.5 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 16: mtry=21; min.node.size=11; sample.fraction=0.344 : y = 0.431 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 15: mtry=27; min.node.size=20; sample.fraction=0.359 : y = 0.439 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 16: mtry=21; min.node.size=11; sample.fraction=0.344 : y = 0.431 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 17: mtry=21; min.node.size=10; sample.fraction=0.348 : y = 0.437 : 0.4 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 18: mtry=13; min.node.size=14; sample.fraction=0.385 : y = 0.434 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 19: mtry=11; min.node.size=20; sample.fraction=0.563 : y = 0.436 : 0.6 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 20: mtry=23; min.node.size=11; sample.fraction=0.34 : y = 0.435 : 0.5 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 21: mtry=22; min.node.size=16; sample.fraction=0.344 : y = 0.44 : 0.5 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 22: mtry=15; min.node.size=10; sample.fraction=0.396 : y = 0.433 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 19: mtry=11; min.node.size=20; sample.fraction=0.563 : y = 0.436 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 20: mtry=23; min.node.size=11; sample.fraction=0.34 : y = 0.435 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 21: mtry=22; min.node.size=16; sample.fraction=0.344 : y = 0.44 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 22: mtry=15; min.node.size=10; sample.fraction=0.396 : y = 0.433 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 23: mtry=15; min.node.size=9; sample.fraction=0.361 : y = 0.437 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 24: mtry=13; min.node.size=16; sample.fraction=0.414 : y = 0.436 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 24: mtry=13; min.node.size=16; sample.fraction=0.414 : y = 0.436 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 25: mtry=31; min.node.size=5; sample.fraction=0.205 : y = 0.439 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 26: mtry=9; min.node.size=26; sample.fraction=0.612 : y = 0.433 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 26: mtry=9; min.node.size=26; sample.fraction=0.612 : y = 0.433 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 27: mtry=9; min.node.size=30; sample.fraction=0.644 : y = 0.436 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 28: mtry=9; min.node.size=25; sample.fraction=0.565 : y = 0.437 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 28: mtry=9; min.node.size=25; sample.fraction=0.565 : y = 0.437 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 29: mtry=24; min.node.size=11; sample.fraction=0.335 : y = 0.435 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 30: mtry=25; min.node.size=8; sample.fraction=0.333 : y = 0.433 : 0.4 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 31: mtry=15; min.node.size=9; sample.fraction=0.386 : y = 0.433 : 0.4 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 32: mtry=14; min.node.size=9; sample.fraction=0.391 : y = 0.438 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 33: mtry=25; min.node.size=10; sample.fraction=0.347 : y = 0.435 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 33: mtry=25; min.node.size=10; sample.fraction=0.347 : y = 0.435 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 34: mtry=25; min.node.size=7; sample.fraction=0.33 : y = 0.433 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 35: mtry=25; min.node.size=7; sample.fraction=0.346 : y = 0.436 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 36: mtry=14; min.node.size=22; sample.fraction=0.54 : y = 0.435 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 37: mtry=10; min.node.size=23; sample.fraction=0.593 : y = 0.432 : 0.5 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 38: mtry=25; min.node.size=10; sample.fraction=0.311 : y = 0.433 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 39: mtry=25; min.node.size=10; sample.fraction=0.316 : y = 0.436 : 0.5 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 37: mtry=10; min.node.size=23; sample.fraction=0.593 : y = 0.432 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 38: mtry=25; min.node.size=10; sample.fraction=0.311 : y = 0.433 : 0.5 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 39: mtry=25; min.node.size=10; sample.fraction=0.316 : y = 0.436 : 0.4 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 40: mtry=24; min.node.size=12; sample.fraction=0.328 : y = 0.438 : 0.5 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 41: mtry=11; min.node.size=27; sample.fraction=0.592 : y = 0.438 : 0.5 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 42: mtry=17; min.node.size=15; sample.fraction=0.367 : y = 0.433 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 43: mtry=17; min.node.size=17; sample.fraction=0.38 : y = 0.435 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 41: mtry=11; min.node.size=27; sample.fraction=0.592 : y = 0.438 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 42: mtry=17; min.node.size=15; sample.fraction=0.367 : y = 0.433 : 0.5 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 43: mtry=17; min.node.size=17; sample.fraction=0.38 : y = 0.435 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 44: mtry=17; min.node.size=17; sample.fraction=0.375 : y = 0.437 : 0.4 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 45: mtry=9; min.node.size=22; sample.fraction=0.577 : y = 0.434 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 46: mtry=25; min.node.size=7; sample.fraction=0.344 : y = 0.434 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 46: mtry=25; min.node.size=7; sample.fraction=0.344 : y = 0.434 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 47: mtry=25; min.node.size=7; sample.fraction=0.337 : y = 0.439 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 48: mtry=10; min.node.size=21; sample.fraction=0.543 : y = 0.435 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 49: mtry=9; min.node.size=19; sample.fraction=0.585 : y = 0.434 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 49: mtry=9; min.node.size=19; sample.fraction=0.585 : y = 0.434 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 50: mtry=10; min.node.size=19; sample.fraction=0.567 : y = 0.437 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 51: mtry=16; min.node.size=11; sample.fraction=0.396 : y = 0.434 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 51: mtry=16; min.node.size=11; sample.fraction=0.396 : y = 0.434 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 52: mtry=15; min.node.size=12; sample.fraction=0.394 : y = 0.433 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 53: mtry=16; min.node.size=11; sample.fraction=0.381 : y = 0.431 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 54: mtry=16; min.node.size=11; sample.fraction=0.372 : y = 0.437 : 0.5 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 53: mtry=16; min.node.size=11; sample.fraction=0.381 : y = 0.431 : 0.5 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 54: mtry=16; min.node.size=11; sample.fraction=0.372 : y = 0.437 : 0.4 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 55: mtry=16; min.node.size=10; sample.fraction=0.39 : y = 0.438 : 0.4 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 56: mtry=15; min.node.size=13; sample.fraction=0.397 : y = 0.433 : 0.4 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 57: mtry=15; min.node.size=12; sample.fraction=0.401 : y = 0.435 : 0.5 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 58: mtry=15; min.node.size=14; sample.fraction=0.388 : y = 0.434 : 0.5 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 58: mtry=15; min.node.size=14; sample.fraction=0.388 : y = 0.434 : 0.4 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 59: mtry=15; min.node.size=13; sample.fraction=0.403 : y = 0.437 : 0.4 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 60: mtry=9; min.node.size=22; sample.fraction=0.622 : y = 0.43 : 0.4 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 61: mtry=9; min.node.size=23; sample.fraction=0.628 : y = 0.439 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 62: mtry=9; min.node.size=18; sample.fraction=0.596 : y = 0.435 : 0.5 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 63: mtry=14; min.node.size=18; sample.fraction=0.392 : y = 0.434 : 0.5 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 64: mtry=13; min.node.size=18; sample.fraction=0.392 : y = 0.434 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 65: mtry=15; min.node.size=16; sample.fraction=0.392 : y = 0.433 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 66: mtry=15; min.node.size=17; sample.fraction=0.394 : y = 0.434 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 67: mtry=16; min.node.size=16; sample.fraction=0.382 : y = 0.437 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 62: mtry=9; min.node.size=18; sample.fraction=0.596 : y = 0.435 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 63: mtry=14; min.node.size=18; sample.fraction=0.392 : y = 0.434 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 64: mtry=13; min.node.size=18; sample.fraction=0.392 : y = 0.434 : 0.5 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 65: mtry=15; min.node.size=16; sample.fraction=0.392 : y = 0.433 : 0.5 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 66: mtry=15; min.node.size=17; sample.fraction=0.394 : y = 0.434 : 0.5 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 67: mtry=16; min.node.size=16; sample.fraction=0.382 : y = 0.437 : 0.5 secs : infill_cb</code></pre>
 <pre><code>## [mbo] 68: mtry=14; min.node.size=18; sample.fraction=0.401 : y = 0.435 : 0.4 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 69: mtry=10; min.node.size=13; sample.fraction=0.39 : y = 0.435 : 0.5 secs : infill_cb</code></pre>
-<pre><code>## [mbo] 70: mtry=15; min.node.size=14; sample.fraction=0.389 : y = 0.436 : 0.5 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 69: mtry=10; min.node.size=13; sample.fraction=0.39 : y = 0.435 : 0.4 secs : infill_cb</code></pre>
+<pre><code>## [mbo] 70: mtry=15; min.node.size=14; sample.fraction=0.389 : y = 0.436 : 0.4 secs : infill_cb</code></pre>
 <pre class="r"><code>Tune_Output</code></pre>
 <pre><code>## Recommended parameter settings: 
 ##   mtry min.node.size sample.fraction
 ## 1   16            17       0.4562907
 ## Results: 
 ##   multiclass.brier exec.time
-## 1         0.431003    0.4434</code></pre>
+## 1         0.431003      0.44</code></pre>
 <p>The ranger package tunes hyperparameters using an iterative process,
 evaluating different combinations of hyperparameters to optimize model
 performance. mtry refers to the number of features examined by each

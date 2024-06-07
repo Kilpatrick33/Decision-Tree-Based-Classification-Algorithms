@@ -4,10 +4,11 @@ title: "Decision Tree-Based Classification Algorithms"
 author: "Alexander Kilpatrick"
 output: html_document
 ---
+[Repository on GitHub](https://github.com/Kilpatrick33/Decision-Tree-Based-Classification-Algorithms)
+
+To cite: Kilpatrick, A. (2024-06-06). Decision Tree-Based Classification Algorithms. [the day you viewed the site]. Retrieved from: this web address
 
 # Introduction
-
-[Repository on GitHub](https://github.com/Kilpatrick33/Decision-Tree-Based-Classification-Algorithms)
 
 In this tutorial, we will learn how to apply decision tree-based algorithms to classification problems. We begin by examining the structure and mechanics of decision trees. We then move into ensemble learning using the random forest algorithm and begin to learn the hyper-parameter tuning process. After that, we will learn how to construct fully-tuned extreme gradient boosted (XGBoost) algorithms. These cutting-edge techniques push the boundaries of decision tree-based models, delivering unparalleled performance and efficiency in classification tasks.
 
